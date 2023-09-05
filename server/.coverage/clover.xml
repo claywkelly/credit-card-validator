@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1693932406622" clover="3.2.0">
+  <project timestamp="1693932406622" name="All files">
+    <metrics statements="26" coveredstatements="25" conditionals="8" coveredconditionals="7" methods="2" coveredmethods="2" elements="36" coveredelements="34" complexity="0" loc="26" ncloc="26" packages="2" files="2" classes="2"/>
+    <package name="controllers">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="creditCardFormatController.ts" path="C:\Users\cwkel\Documents\GitHub\credit-card-validator\server\src\controllers\creditCardFormatController.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="20" coveredstatements="19" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <file name="creditCardService.ts" path="C:\Users\cwkel\Documents\GitHub\credit-card-validator\server\src\services\creditCardService.ts">
+        <metrics statements="20" coveredstatements="19" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="13" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="32" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="16" type="stmt"/>
+        <line num="23" count="16" type="stmt"/>
+        <line num="26" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
+        <line num="34" count="16" type="stmt"/>
+        <line num="39" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

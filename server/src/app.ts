@@ -10,6 +10,7 @@ import { ValidateError } from "tsoa";
 const app: Application = express();
 const port = 5000;
 
+app.use(express.json());
 RegisterRoutes(app);
 
 /*app.get('/credit-card-format', (req, res) => {

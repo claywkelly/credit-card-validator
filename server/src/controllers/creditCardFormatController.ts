@@ -1,10 +1,12 @@
-import { Controller, Get, Route} from "@tsoa/runtime";
-import { validateCreditCard } from "../helpers/creditCardHelper";
+import { Controller, Route, Post, Body} from "@tsoa/runtime";
+import { CreditCardService } from "../services/creditCardService";
+import { CreditCardFormatBody } from "../models/creditCardFormat";
 
 @Route("credit-card-format")
 export class CreditCardFormatController extends Controller {
-    @Get('{id}')
-    public async checkFormat(id: string): Promise<boolean> {
-        return validateCreditCard(id);
+    @Post()
+    public async checkFormat(@Body() body: CreditCardFormatBody): Promise<boolean> {
+        const creditCardService = new CreditCardService();
+        return creditCardService.validateCreditCard(body.creditCardNumber);
     }
 }

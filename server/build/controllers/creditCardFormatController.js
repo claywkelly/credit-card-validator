@@ -25,10 +25,16 @@ exports.CreditCardFormatController = void 0;
 const runtime_1 = require("@tsoa/runtime");
 const creditCardService_1 = require("../services/creditCardService");
 let CreditCardFormatController = class CreditCardFormatController extends runtime_1.Controller {
-    checkFormat(body) {
+    checkFormatPost(bodyData) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(bodyData);
+            return true;
+        });
+    }
+    checkFormat(id) {
         return __awaiter(this, void 0, void 0, function* () {
             const creditCardService = new creditCardService_1.CreditCardService();
-            return creditCardService.validateCreditCard(body.creditCardNumber);
+            return creditCardService.validateCreditCard(id);
         });
     }
 };
@@ -39,8 +45,14 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
+], CreditCardFormatController.prototype, "checkFormatPost", null);
+__decorate([
+    (0, runtime_1.Get)('{id}'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
 ], CreditCardFormatController.prototype, "checkFormat", null);
 exports.CreditCardFormatController = CreditCardFormatController = __decorate([
     (0, runtime_1.Route)("credit-card-format")
 ], CreditCardFormatController);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3JlZGl0Q2FyZEZvcm1hdENvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY29udHJvbGxlcnMvY3JlZGl0Q2FyZEZvcm1hdENvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsMkNBQWtFO0FBQ2xFLHFFQUFrRTtBQUkzRCxJQUFNLDBCQUEwQixHQUFoQyxNQUFNLDBCQUEyQixTQUFRLG9CQUFVO0lBRXpDLFdBQVcsQ0FBUyxJQUEwQjs7WUFDdkQsTUFBTSxpQkFBaUIsR0FBRyxJQUFJLHFDQUFpQixFQUFFLENBQUM7WUFDbEQsT0FBTyxpQkFBaUIsQ0FBQyxrQkFBa0IsQ0FBQyxJQUFJLENBQUMsZ0JBQWdCLENBQUMsQ0FBQztRQUN2RSxDQUFDO0tBQUE7Q0FDSixDQUFBO0FBTlksZ0VBQTBCO0FBRXRCO0lBRFosSUFBQSxjQUFJLEdBQUU7SUFDbUIsV0FBQSxJQUFBLGNBQUksR0FBRSxDQUFBOzs7OzZEQUcvQjtxQ0FMUSwwQkFBMEI7SUFEdEMsSUFBQSxlQUFLLEVBQUMsb0JBQW9CLENBQUM7R0FDZiwwQkFBMEIsQ0FNdEMifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3JlZGl0Q2FyZEZvcm1hdENvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvY29udHJvbGxlcnMvY3JlZGl0Q2FyZEZvcm1hdENvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsMkNBQWtFO0FBQ2xFLHFFQUFrRTtBQUkzRCxJQUFNLDBCQUEwQixHQUFoQyxNQUFNLDBCQUEyQixTQUFRLG9CQUFVO0lBRXpDLGVBQWUsQ0FBUyxRQUE4Qjs7WUFDL0QsT0FBTyxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQ0FBQztZQUN0QixPQUFPLElBQUksQ0FBQztRQUNoQixDQUFDO0tBQUE7SUFFWSxXQUFXLENBQUMsRUFBVTs7WUFDL0IsTUFBTSxpQkFBaUIsR0FBRyxJQUFJLHFDQUFpQixFQUFFLENBQUM7WUFDbEQsT0FBTyxpQkFBaUIsQ0FBQyxrQkFBa0IsQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUNwRCxDQUFDO0tBQUE7Q0FDSixDQUFBO0FBWFksZ0VBQTBCO0FBRXRCO0lBRFosSUFBQSxjQUFJLEdBQUU7SUFDdUIsV0FBQSxJQUFBLGNBQUksR0FBRSxDQUFBOzs7O2lFQUduQztBQUVZO0lBRFosSUFBQSxhQUFHLEVBQUMsTUFBTSxDQUFDOzs7OzZEQUlYO3FDQVZRLDBCQUEwQjtJQUR0QyxJQUFBLGVBQUssRUFBQyxvQkFBb0IsQ0FBQztHQUNmLDBCQUEwQixDQVd0QyJ9

@@ -8,7 +8,15 @@ export const ValidationBox = ({setResult}) => {
 
   const fetchData = (value) => {
     if(value.length > 0){
-        fetch("/credit-card-format/" + value)
+        fetch("/credit-card-format", {
+          method: "POST",
+          body: JSON.stringify({
+            creditCardNumber: value
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
+        })
         .then((response) => response.json())
         .then((json) => {
           setResult(json);
